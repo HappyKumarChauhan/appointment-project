@@ -33,7 +33,7 @@ export default function App() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/api/appointments?date=${date}`,
+        `https://appointment-project-xg2j.onrender.com/api/appointments?date=${date}`,
       );
       const data = await response.json();
       setSlots(data);
@@ -63,7 +63,7 @@ export default function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/appointments/book",
+        "https://appointment-project-xg2j.onrender.com/api/appointments/book",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

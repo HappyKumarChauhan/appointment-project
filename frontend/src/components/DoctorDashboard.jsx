@@ -8,7 +8,7 @@ export default function DoctorDashboard({ date, availableDates, onDateChange }) 
     const fetchAdminSchedule = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`http://localhost:5000/api/admin/appointments?date=${date}`);
+        const response = await fetch(`https://appointment-project-xg2j.onrender.com/api/admin/appointments?date=${date}`);
         const data = await response.json();
         
         // Sort appointments by AM/PM and time
